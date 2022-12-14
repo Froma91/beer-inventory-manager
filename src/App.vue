@@ -14,59 +14,51 @@
       <span class="navbar-toggler-icon"></span>
     </button>
   </nav>
-
-  <div id="app" class="container py-4">
+  <div id="app" class="container py-2">
     <div class="row">
       <div class="col-md-3">
-        <h2>Wine</h2>
-
+        <h2>Beer</h2>
         <div class="card card-body">
-          <form ref="userForm" v-on:submit="processUser">
+          <form ref="userForm" v-on:submit="processBeer">
             <div class="form-group">
               <input
                 type="text"
                 ref="name"
-                v-model="user.name"
+                v-model="beer.name"
                 class="form-control"
                 placeholder="Name"
-                minlength="10"
-                maxlength="50"
-                required
-              />
-            </div>
-
-            <div class="form-group">
-              <input
-                type="text"
-                v-model="user.username"
-                class="form-control"
-                placeholder="Username"
                 minlength="6"
                 maxlength="20"
                 required
               />
             </div>
-
             <div class="form-group">
               <input
-                type="email"
-                v-model="user.email"
+                type="text"
+                v-model="beer.price"
                 class="form-control"
-                placeholder="Email"
-                minlength="10"
+                placeholder="Price"
+                minlength="4"
                 maxlength="50"
                 required
               />
+              <input
+                type="text"
+                v-model="beer.image"
+                class="form-control"
+                placeholder="Image"
+                minlength="4"
+                maxlength="150"
+                required
+              />
             </div>
-
-            <div class="form-group">
+            <div class="form-group py-1">
               <input
                 type="submit"
                 class="btn btn-success btn_block text-dark"
                 v-bind:value="operation"
               />
             </div>
-
             <div class="form-group">
               <input
                 type="reset"
@@ -77,53 +69,36 @@
           </form>
         </div>
       </div>
-
       <div class="col-md-9">
-        <h1>Wines's list</h1>
-
+        <h1>Beers's list</h1>
         <div class="table-responsive">
           <table class="table table-striped">
             <thead>
               <tr>
                 <th>Number</th>
-
+                <th>Price</th>
                 <th>Name</th>
-
-                <th>Color</th>
-
-                <th>Producer</th>
-
-                <th>Region</th>
-
-                <th colspan="2" options></th>
+                <th>Image</th>
+                <th colspan="4" options></th>
               </tr>
             </thead>
-
             <tbody>
-              <tr v-for="(user, index) in users">
-                <!--parcours de mon array user-->
-
-                <td>{{ user.id }}</td>
-                <!-- interpollation -->
-
-                <td>{{ user.name }}</td>
-
-                <td>{{ user.username }}</td>
-
-                <td>{{ user.email }}</td>
-
+              <tr v-for="(beer, index) in beers">
+                <td>{{ beer.id }}</td>
+                <td>{{ beer.price }}</td>
+                <td>{{ beer.name }}</td>
+                <td><img :src="beer.image" :alt="image" /></td>
                 <td>
                   <button
-                    @click="editUser(user.id)"
+                    @click="editBeer(beer.id)"
                     class="btn btn-info btn-block"
                   >
                     Update
                   </button>
                 </td>
-
                 <td>
                   <button
-                    @click="deleteUser(user.id, $event)"
+                    @click="deleteBeer(beer.id, $event)"
                     class="btn btn-danger btn-block"
                   >
                     Delete
@@ -142,135 +117,96 @@
 export default {
   data() {
     return {
-      users: [],
-
-      user: {
+      beers: [],
+      beer:{
         id: "",
-
         name: "",
-
-        username: "",
-
-        email: "",
+        price:"",
+        image: "",
       },
-
       operation: "Register",
-
       userIndex: -1,
     };
   },
-
   created() {
-    if (localStorage.getItem("vue3.users") != null) {
-      this.users = JSON.parse(localStorage.getItem("vue3.users"));
+    if (localStorage.getItem("vue3.beers") != null) {
+      this.beers = JSON.parse(localStorage.getItem("vue3.beers"));
     } else {
-      this.listUsers();
+      this.listBeers();
     }
   },
-
   mounted() {
     this.$refs.name.focus();
   },
-
   methods: {
-    listUsers: async function () {
+    listBeers: async function () {
       const res = await fetch(
-        "https://portal.winedata.io/api/wines?language=en&per-page=20&page=1"
+        "https://api.sampleapis.com/beers/ale"
       );
-
       const data = await res.json();
-
       console.log(data);
-
-      this.users = data.slice(0, 5);
-
+    debugger
+      this.beers = data.slice(0,100);
       this.updateLocalStorage();
     },
-
     updateLocalStorage: function () {
-      localStorage.setItem("vue3.users", JSON.stringify(this.users));
+      localStorage.setItem("vue3.users", JSON.stringify(this.beers));
     },
-
-    processUser: function (event) {
+    processBeer: function (event) {
       event.preventDefault();
-
       if (this.operation == "Register") {
-        this.user.id = this.findMaxId() + 1;
-
-        this.users.push({
+        this.beer.id = this.findMaxId()+1;
+        this.beers.push({
           id: this.user.id,
-
-          name: this.user.name,
-
-          username: this.user.username,
-
-          email: this.user.email,
+          price: this.beer.price,
+          name: this.beer.name,
+          image: this.beer.image,
         });
       } else {
-        this.users[this.userIndex].name = this.user.name;
-
-        this.users[this.userIndex].username = this.user.username;
-
-        this.users[this.userIndex].email = this.user.email;
+        this.beers[this.userIndex].price = this.beer.price;
+        this.beers[this.userIndex].name = this.beer.name;
+        this.beers[this.userIndex].image = this.beer.image;
       }
 
       this.updateLocalStorage();
-
       this.findMaxId();
-
       this.clearFields();
     },
 
     findMaxId: function () {
       const maxId = Math.max.apply(
         Math,
-        this.users.map(function (user) {
-          return user.id;
+        this.beers.map(function (beer) {
+          return beer.id;
         })
       );
-
       return maxId;
     },
-
-    editUser(id) {
+    editBeer(id) {
       this.operation = "Update";
-
-      const userFound = this.users.find((user, index) => {
+      const userFound = this.beers.find((beer, index) => {
         this.userIndex = index;
-
-        return user.id == id;
+        return beer.id == id;
       });
-
-      this.user.name = userFound.name;
-
-      this.user.username = userFound.username;
-
-      this.user.email = userFound.email;
+      this.beer.price = userFound.price;
+      this.beer.name = userFound.name;
+      this.beer.image = userFound.image;
     },
-
-    deleteUser(id, event) {
+    deleteBeer(id, event) {
       const confirmation = confirm("Do you want to delete the user?");
-
       if (confirmation) {
-        this.users = this.users.filter((user) => user.id != id);
-
+        this.beers = this.beers.filter((beer) => beer.id != id);
         updateLocalStorage();
       } else {
         event.preventDefault();
       }
     },
-
     clearFields() {
-      this.user.id = "";
-
-      this.user.name = "";
-
-      this.user.username = "";
-
-      this.user.email = "";
-
+      this.beer.id = "";
+      this.beer.price = "";
+      this.beer.name = "";
+      this.beer.image = "";
       this.operation = "Register";
-
       this.$ref.name.focus();
     },
   },
