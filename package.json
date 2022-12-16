@@ -13,6 +13,7 @@
     "bootstrap": "^5.2.3",
     "bootstrap-vue": "^2.23.1",
     "bootswatch": "^5.2.3",
+    "material-icons": "^1.13.1",
     "vue": "^3.2.45",
     "vue-router": "^4.1.6"
   },

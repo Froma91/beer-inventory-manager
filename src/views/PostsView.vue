@@ -68,7 +68,7 @@
               </tr>
             </thead>
             <tbody>
-              <tr v-for="(beer,index) in beers">
+              <tr v-for="(beer, index) in beers">
                 <td>{{ beer.id }}</td>
                 <td>{{ beer.price }}</td>
                 <td>{{ beer.name }}</td>
