@@ -1,7 +1,7 @@
 <template>
   <div id="app" class="container py-2 px-0">
     <div class="row">
-      <div class="col-md-3 ">
+      <div class="col-md-3">
         <h2>Add Beer</h2>
         <div class="card card-body">
           <form ref="userForm" v-on:submit="processBeer">
@@ -103,10 +103,10 @@ export default {
   data() {
     return {
       beers: [],
-      beer:{
+      beer: {
         id: "",
         name: "",
-        price:"",
+        price: "",
         image: "",
       },
       operation: "Register",
@@ -125,13 +125,11 @@ export default {
   },
   methods: {
     listBeers: async function () {
-      const res = await fetch(
-        "https://api.sampleapis.com/beers/ale"
-      );
+      const res = await fetch("https://api.sampleapis.com/beers/ale");
       const data = await res.json();
       console.log(data);
-    debugger
-      this.beers = data.slice(0,100);
+      debugger;
+      this.beers = data.slice(0, 100);
       this.updateLocalStorage();
     },
     updateLocalStorage: function () {
@@ -140,7 +138,7 @@ export default {
     processBeer: function (event) {
       event.preventDefault();
       if (this.operation == "Register") {
-        this.beer.id = this.findMaxId()+1;
+        this.beer.id = this.findMaxId() + 1;
         this.beers.push({
           id: this.user.id,
           price: this.beer.price,
@@ -195,4 +193,3 @@ export default {
   },
 };
 </script>
-

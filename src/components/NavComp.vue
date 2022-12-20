@@ -1,8 +1,7 @@
 <template>
   <nav class="navbar navbar-expand-lg bg-info">
     <div class="container-fluid">
-      <router-link to="/" class="navbar-brand">LOGO
-      </router-link>
+      <router-link to="/" class="navbar-brand">LOGO </router-link>
       <button
         class="navbar-toggler"
         type="button"

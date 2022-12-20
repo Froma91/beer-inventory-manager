@@ -1,13 +1,13 @@
 <template>
-  <NavComp/>
+  <NavComp />
   <router-view />
 </template>
 
 <script>
-import NavComp from "@/components/NavComp.vue"
+import NavComp from "@/components/NavComp.vue";
 export default {
   name: "App",
-  components:{
+  components: {
     NavComp,
   },
 };
@@ -17,12 +17,9 @@ th,
 td {
   text-align: center;
   vertical-align: middle;
-  },
-  .material-icons-sharp {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 200,
-  'GRAD' 0,
-  'opsz' 480
+}
+,
+.material-icons-sharp {
+  font-variation-settings: "FILL" 0, "wght" 200, "GRAD" 0, "opsz" 480;
 }
 </style>
