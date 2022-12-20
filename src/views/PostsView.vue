@@ -1,10 +1,10 @@
 <template>
   <div id="app" class="container py-2 px-0">
     <div class="row">
-      <div class="col-md-3 ">
+      <div class="col-md-3">
         <h2>Add Beer</h2>
         <div class="card card-body">
-          <form ref="userForm" v-on:submit="processBeer">
+          <form ref="userForm" v-on:submit.prevent="processBeer">
             <div class="form-group">
               <input
                 type="text"
@@ -68,11 +68,13 @@
               </tr>
             </thead>
             <tbody>
-              <tr v-for="(beer, index) in beers">
+              <tr v-for="(beer, index) in beers" :key="index">
                 <td>{{ beer.id }}</td>
                 <td>{{ beer.price }}</td>
                 <td>{{ beer.name }}</td>
-                <td><img :src="beer.image" :alt="image" /></td>
+                <td>
+                  <img :src="beer.image" class="img" :alt="image" />
+                </td>
                 <td>
                   <button
                     @click="editBeer(beer.id)"
@@ -103,10 +105,10 @@ export default {
   data() {
     return {
       beers: [],
-      beer:{
+      beer: {
         id: "",
         name: "",
-        price:"",
+        price: "",
         image: "",
       },
       operation: "Register",
@@ -125,24 +127,21 @@ export default {
   },
   methods: {
     listBeers: async function () {
-      const res = await fetch(
-        "https://api.sampleapis.com/beers/ale"
-      );
+      const res = await fetch("https://api.sampleapis.com/beers/ale");
       const data = await res.json();
       console.log(data);
-    debugger
-      this.beers = data.slice(0,100);
+      //debugger;
+      this.beers = data.slice(0, 5);
       this.updateLocalStorage();
     },
     updateLocalStorage: function () {
       localStorage.setItem("vue3.users", JSON.stringify(this.beers));
     },
-    processBeer: function (event) {
-      event.preventDefault();
+    processBeer: function () {
       if (this.operation == "Register") {
-        this.beer.id = this.findMaxId()+1;
+        this.beer.id = this.findMaxId() + 1;
         this.beers.push({
-          id: this.user.id,
+          id: this.beer.id,
           price: this.beer.price,
           name: this.beer.name,
           image: this.beer.image,
@@ -179,7 +178,7 @@ export default {
       const confirmation = confirm("Do you want to delete the user?");
       if (confirmation) {
         this.beers = this.beers.filter((beer) => beer.id != id);
-        updateLocalStorage();
+        this.updateLocalStorage();
       } else {
         event.preventDefault();
       }
@@ -195,4 +194,9 @@ export default {
   },
 };
 </script>
-
+<style scoped>
+.img {
+  max-width: 100px;
+  max-height: 100px;
+}
+</style>
