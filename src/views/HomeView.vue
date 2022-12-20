@@ -6,6 +6,9 @@
   </head>
   <body>
       <h1>Bienvenue</h1>
+      <div class="container">
+  <div class="row">
+    <div class="col">
       <h2>1. Ce que nous vous offrons</h2>
       <p>Une application de gestion de cave à bière</p>
      <p>Pratique, simple et rapide !</p>
@@ -25,6 +28,13 @@
 </ul>
 </P>
 </div>
+    </div>
+    <div class="col">
+      <img src="https://images.pexels.com/photos/1267292/pexels-photo-1267292.jpeg" class="img-thumbnail" alt="Image de 3 bières différentes sur une table" height="400" width="800"/>
+    </div>
+  </div>
+      </div>
+     
 <div classe="formulaireQuestion">
   <h2>Une question ou sugestion ?</h2>
 <div class="mb-3">
