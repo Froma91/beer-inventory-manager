@@ -43,7 +43,7 @@
                 preserveAspectRatio="xMidYMid slice"
                 focusable="false"
               >
-                <rect width="100%" height="100%" fill="#74D0F1" />
+                <rect width="100%" height="100%" fill="#0F9DE8" />
               </svg>
 
               <div class="container">
@@ -67,7 +67,7 @@
                 preserveAspectRatio="xMidYMid slice"
                 focusable="false"
               >
-                <rect width="100%" height="100%" fill="#74D0F1" />
+                <rect width="100%" height="100%" fill="#0F9DE8" />
               </svg>
 
               <div class="container">
@@ -89,7 +89,7 @@
                 preserveAspectRatio="xMidYMid slice"
                 focusable="false"
               >
-                <rect width="100%" height="100%" fill="#74D0F1" />
+                <rect width="100%" height="100%" fill="#0F9DE8" />
               </svg>
 
               <div class="container">
