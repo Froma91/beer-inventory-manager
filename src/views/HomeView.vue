@@ -128,37 +128,37 @@
         <!-- Trois columnes de texte au-dessous de carousel -->
         <div class="row text-center">
           <div class="col-lg-4">
-            <img class="img-cercle"
-              src="https://www.lamentounasc.fr/file/si916015/biere-entre-amis-fi17423796x640.jpg"/>
+            <img
+              class="img-cercle"
+              src="https://www.lamentounasc.fr/file/si916015/biere-entre-amis-fi17423796x640.jpg"
+            />
 
             <h2>Partage</h2>
             <p>
-              Les producteurs de la region collecte le meilleur blés pour vous
+              Les producteurs de la region collectent le meilleur blés pour vous
             </p>
             <p>
               <a class="btn btn-secondary" href="#">View details &raquo;</a>
             </p>
           </div>
           <div class="col-lg-4">
-              <img class="img-cercle"
-              src="https://c8.alamy.com/compfr/pwahe0/letiquette-des-aliments-biologiques-sains-bio-produit-de-haute-qualite-et-de-badges-100-eco-bio-et-naturels-sur-licone-du-produit-emblemes-pour-cafe-lemballage-etc-vector-pwahe0.jpg">
+            <img
+              class="img-cercle"
+              src="https://c8.alamy.com/compfr/pwahe0/letiquette-des-aliments-biologiques-sains-bio-produit-de-haute-qualite-et-de-badges-100-eco-bio-et-naturels-sur-licone-du-produit-emblemes-pour-cafe-lemballage-etc-vector-pwahe0.jpg"
+            />
             <h2>100% Bio</h2>
-            <p>
-              Another exciting bit of representative placeholder content. This
-              time, we've moved on to the second column.
-            </p>
+            <p>Nous faisons attention à l'environnement et à nos clients</p>
             <p>
               <a class="btn btn-secondary" href="#">View details &raquo;</a>
             </p>
           </div>
           <div class="col-lg-4">
-            <img class="img-cercle"
-            src="https://thumbs.dreamstime.com/z/made-switzerland-badge-made-switzerland-round-seal-ribbon-switzerland-made-switzerland-121703186.jpg">
+            <img
+              class="img-cercle"
+              src="https://thumbs.dreamstime.com/z/made-switzerland-badge-made-switzerland-round-seal-ribbon-switzerland-made-switzerland-121703186.jpg"
+            />
             <h2>Produit de qualité</h2>
-            <p>
-              And lastly this, the third column of representative placeholder
-              content.
-            </p>
+            <p>Produits d'origine suisse</p>
             <p>
               <a class="btn btn-secondary" href="#">View details &raquo;</a>
             </p>
@@ -172,12 +172,15 @@
                 <span class="text-muted">Vraiment les meilleures</span>
               </h2>
               <p class="lead">
-                Les bieres viennent d'une contrée lointaine très lointaine au dela des montagnes et des rivières
+                Les bieres viennent d'une contrée lointaine très lointaine au
+                dela des montagnes et des rivières
               </p>
             </div>
             <div class="col-md-5">
-              <img id="img1"
-                src="https://www.liquor.com/thmb/zzY3QbT5h9S9utBkexhECycXZIc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-519728153-7dca4b18c59f4b1fa3654e4d5c9db884.jpg">
+              <img
+                id="img1"
+                src="https://www.liquor.com/thmb/zzY3QbT5h9S9utBkexhECycXZIc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-519728153-7dca4b18c59f4b1fa3654e4d5c9db884.jpg"
+              />
             </div>
           </div>
           <hr class="featurette-divider" />
@@ -185,14 +188,12 @@
           <div class="row featurette">
             <div class="col-md-7 order-md-2">
               <h2 class="featurette-heading">
-                Oh yeah, it’s that good.
-                <span class="text-muted">See for yourself.</span>
+                Un moment conviviale autour d'un verre.
+                <span class="text-muted"
+                  >On ne choisie pas la famille, mais les amis oui !</span
+                >
               </h2>
-              <p class="lead">
-                Another featurette? Of course. More placeholder content here to
-                give you an idea of how this layout would work with some actual
-                real-world content in place.
-              </p>
+              <p class="lead">On se voit ce weekend ;) !!</p>
             </div>
             <div class="col-md-5 order-md-1">
               <img
@@ -207,13 +208,11 @@
       </main>
       <!-- FOOTER -->
       <footer class="container" color="#74D0F1">
-        
         <p class="float-end"><a href="#">Back to top</a></p>
         <p>
           &copy; 2017–2021 Company, Inc. &middot;
           <a href="#">Privacy</a> &middot; <a href="#">Terms</a>
         </p>
-        
       </footer>
     </body>
   </html>
@@ -229,9 +228,30 @@
   max-height: 500px;
 }
 .img-cercle {
-    width: 140px;
-    height: 140px;
-    border: 180px;
-    border-radius: 180px;
+  width: 140px;
+  height: 140px;
+  border: 180px;
+  border-radius: 180px;
+}
+.facebook {
+  background-color: #3b5998;
+  color: #fff;
+  font-size: 18px;
+  padding-top: 5px;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
+
+.twitter {
+  background-color: #1da1f2;
+  color: #fff;
+  font-size: 18px;
+  padding-top: 5px;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
 }
 </style>
