@@ -3,7 +3,7 @@
     <div class="container-fluid">
       <router-link to="/" class="navbar-brand"
         ><img
-          src="C:\ProjetTechWeb\projet-milan-arthur-fredy\src\assets\logo.svg"
+          src="../assets/logo.svg"
           alt="logo biere"
         />
       </router-link>
