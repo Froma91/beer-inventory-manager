@@ -1,44 +1,31 @@
 <template>
-  <nav class="navbar navbar-expand-lg bg-info">
-    <div class="container-fluid">
-      <router-link to="/" class="navbar-brand"
-        ><img
-          src="C:\ProjetTechWeb\projet-milan-arthur-fredy\src\assets\logo.svg"
-          alt="logo biere"
-        />
+  <nav class="navbar navbar-expand-lg bg-warning">
+    <div class="container justify-content-around">
+      <router-link to="/" class="nav-link active" aria-current="page">
+        <a class="nav-link active">Home</a>
       </router-link>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <router-link to="/" class="nav-link active" aria-current="page">
-              <span class="material-icons-two-tone">home</span>
-            </router-link>
-          </li>
-          <li class="nav-item">
-            <router-link to="/about" class="nav-link"
-              ><span class="material-icons-two-tone">info</span></router-link
-            >
-          </li>
-          <li class="nav-item">
-            <router-link to="/posts" class="nav-link"
-              ><span class="material-icons-two-tone"
-                >reorder
-              </span></router-link
-            >
-          </li>
-        </ul>
-      </div>
+
+      <router-link to="/about" class="nav-link"
+        ><a class="nav-link active">About</a>
+      </router-link>
+
+      <router-link to="/posts" class="nav-link"
+        ><a class="nav-link active">Beer's List</a>
+      </router-link>
     </div>
   </nav>
 </template>
+
+<style scoped>
+  .nav-link{
+  color: rgb(23, 19, 19);
+  font-size: 1.0em;
+  background-color: rgba(229, 223, 223, 0.246);
+  padding: 0.5em;
+  border-radius: 50%;
+  margin: 0.1em;    
+  }
+  .navbar{
+    padding: 0.2em 1rem;
+  }
+</style>

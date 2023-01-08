@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="container py-2 px-0">
+  <div id="app" class="container-fluid">
     <div class="row">
       <div class="col-md-3">
         <h2>Add Beer</h2>
@@ -131,7 +131,7 @@ export default {
       const data = await res.json();
       console.log(data);
       //debugger;
-      this.beers = data.slice(0, 5);
+      this.beers = data.slice(0, 20);
       this.updateLocalStorage();
     },
     updateLocalStorage: function () {

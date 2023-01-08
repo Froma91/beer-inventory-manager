@@ -3,7 +3,7 @@ import App from "./App.vue";
 import router from "./router";
 
 import "bootstrap";
-import "bootswatch/dist/simplex/bootstrap.min.css";
+import "bootswatch/dist/darkly/bootstrap.min.css";
 import "material-icons/iconfont/material-icons.css";
 
 import "./assets/main.css";
