@@ -2,7 +2,6 @@
   <NavComp />
   <router-view />
   <FooterComp />
-
 </template>
 
 <script>
