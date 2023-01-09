@@ -1,103 +1,21 @@
 <template>
-  <div id="app" class="container-fluid">
+  <h1>Beer's List</h1>
+  <hr />
     <div class="row">
-      <div class="col-md-3">
-        <h2>Add Beer</h2>
-        <div class="card card-body">
-          <form ref="userForm" v-on:submit.prevent="processBeer">
-            <div class="form-group">
-              <input
-                type="text"
-                ref="name"
-                v-model="beer.name"
-                class="form-control"
-                placeholder="Name"
-                minlength="6"
-                maxlength="20"
-                required
-              />
-            </div>
-            <div class="form-group">
-              <input
-                type="text"
-                v-model="beer.price"
-                class="form-control"
-                placeholder="Price"
-                minlength="4"
-                maxlength="50"
-                required
-              />
-              <input
-                type="text"
-                v-model="beer.image"
-                class="form-control"
-                placeholder="Image"
-                minlength="4"
-                maxlength="150"
-                required
-              />
-            </div>
-            <div class="form-group py-1">
-              <input
-                type="submit"
-                class="btn btn-success btn_block text-dark"
-                v-bind:value="operation"
-              />
-            </div>
-            <div class="form-group">
-              <input
-                type="reset"
-                class="btn btn-primary btn_block"
-                value="Clear"
-              />
-            </div>
-          </form>
-        </div>
-      </div>
-      <div class="col-md-9">
-        <h1>Beers's list</h1>
-        <div class="table-responsive">
-          <table class="table table-striped">
-            <thead>
-              <tr class="text-center">
-                <th>Number</th>
-                <th>Price</th>
-                <th>Name</th>
-                <th>Image</th>
-                <th colspan="4" options></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr v-for="(beer, index) in beers" :key="index">
-                <td>{{ beer.id }}</td>
-                <td>{{ beer.price }}</td>
-                <td>{{ beer.name }}</td>
-                <td>
-                  <img :src="beer.image" class="img" :alt="image" />
-                </td>
-                <td>
-                  <button
-                    @click="editBeer(beer.id)"
-                    class="btn btn-info btn-block"
-                  >
-                    Update
-                  </button>
-                </td>
-                <td>
-                  <button
-                    @click="deleteBeer(beer.id, $event)"
-                    class="btn btn-danger btn-block"
-                  >
-                    Delete
-                  </button>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+      <div class="card col-12 col-sm-4 col-md-0 col-lg-2 mb-3" v-for="(beer,index) in beers" :key="index">
+        <img
+          id="img"
+          :src="beer.image"
+          :alt="`image-${image}`"
+          class="card-img-top"
+        />
+        <div class="card-body" >
+          <h6 class="card-title">{{ beer.name }}</h6>
+          <p class="card-text text-success">{{ beer.price }}<span></span></p>
+          <button class="btn btn-info">Acheter</button>
+        </div>        
       </div>
     </div>
-  </div>
 </template>
 
 <script>
@@ -112,7 +30,7 @@ export default {
         image: "",
       },
       operation: "Register",
-      userIndex: -1,
+      beerIndex: -1,
     };
   },
   created() {
@@ -130,12 +48,12 @@ export default {
       const res = await fetch("https://api.sampleapis.com/beers/ale");
       const data = await res.json();
       console.log(data);
-      //debugger;
-      this.beers = data.slice(0, 20);
+      debugger;
+      this.beers = data.slice(0, 5);
       this.updateLocalStorage();
     },
     updateLocalStorage: function () {
-      localStorage.setItem("vue3.users", JSON.stringify(this.beers));
+      localStorage.setItem("vue3.beers", JSON.stringify(this.beers));
     },
     processBeer: function () {
       if (this.operation == "Register") {
@@ -147,9 +65,9 @@ export default {
           image: this.beer.image,
         });
       } else {
-        this.beers[this.userIndex].price = this.beer.price;
-        this.beers[this.userIndex].name = this.beer.name;
-        this.beers[this.userIndex].image = this.beer.image;
+        this.beers[this.beerIndex].price = this.beer.price;
+        this.beers[this.beerIndex].name = this.beer.name;
+        this.beers[this.beerIndex].image = this.beer.image;
       }
       this.updateLocalStorage();
       this.findMaxId();
@@ -166,16 +84,16 @@ export default {
     },
     editBeer(id) {
       this.operation = "Update";
-      const userFound = this.beers.find((beer, index) => {
-        this.userIndex = index;
+      const beerFound = this.beers.find((beer, index) => {
+        this.beerIndex = index;
         return beer.id == id;
       });
-      this.beer.price = userFound.price;
-      this.beer.name = userFound.name;
-      this.beer.image = userFound.image;
+      this.beer.price = beerFound.price;
+      this.beer.name = beerFound.name;
+      this.beer.image = beerFound.image;
     },
     deleteBeer(id, event) {
-      const confirmation = confirm("Do you want to delete the user?");
+      const confirmation = confirm("Do you want to delete the beer?");
       if (confirmation) {
         this.beers = this.beers.filter((beer) => beer.id != id);
         this.updateLocalStorage();
@@ -195,8 +113,13 @@ export default {
 };
 </script>
 <style scoped>
-.img {
+#img {
   max-width: 100px;
-  max-height: 100px;
+  max-height: 150px;
 }
+
+.container{
+  background-color: blue;
+}
+
 </style>
