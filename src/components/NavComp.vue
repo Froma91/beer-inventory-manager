@@ -2,14 +2,14 @@
   <nav class="navbar navbar-expand-lg bg-warning">
     <div class="container justify-content-around">
       <router-link to="/" class="nav-link active" aria-current="page">
-        <a class="nav-link active">Home</a>
+        <a class="nav-link active">Your Beer's list</a>
       </router-link>
 
       <router-link to="/about" class="nav-link"
         ><a class="nav-link active">About</a>
       </router-link>
 
-      <router-link to="/posts" class="nav-link"
+      <router-link to="/BeerFilterView" class="nav-link"
         ><a class="nav-link active">Beer's List</a>
       </router-link>
     </div>
