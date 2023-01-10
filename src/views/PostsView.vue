@@ -1,22 +1,90 @@
 <template>
-  <h1>Beer's List</h1>
-  <hr />
-    <div class="row">
-      <div class="card col-12 col-sm-4 col-md-0 col-lg-2 mb-3" v-for="(beer,index) in beers" :key="index">
-        <img
-          id="img"
-          :src="beer.image"
-          :alt="`image-${image}`"
-          class="card-img-top"
-        />
-        <div class="card-body" >
-          <h6 class="card-title">{{ beer.name }}</h6>
-          <p class="card-text text-success">{{ beer.price }}<span></span></p>
-          <button class="btn btn-info">Acheter</button>
-        </div>        
+    <div id="app" class="container py-2 px-0">
+      <div class="row">
+        <div class="col-md-3">
+          <h2>Add Beer</h2>
+          <div class="card card-body">
+            <form ref="userForm" v-on:submit.prevent="processBeer">
+              <div class="form-group">
+                <input
+                  type="text"
+                  ref="name"
+                  v-model="beer.name"
+                  class="form-control"
+                  placeholder="Name"
+                  minlength="6"
+                  maxlength="20"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  v-model="beer.price"
+                  class="form-control"
+                  placeholder="Price"
+                  minlength="4"
+                  maxlength="50"
+                  required
+                />
+                <input
+                  type="text"
+                  v-model="beer.image"
+                  class="form-control"
+                  placeholder="Image"
+                  minlength="4"
+                  maxlength="150"
+                  required
+                />
+              </div>
+              <div class="form-group py-1">
+                <input
+                  type="submit"
+                  class="btn btn-success btn_block text-dark"
+                  v-bind:value="operation"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="reset"
+                  class="btn btn-primary btn_block"
+                  value="Clear"
+                />
+              </div>
+            </form>
+        </div>
       </div>
     </div>
-</template>
+        <h1>Beer's List</h1>
+        <hr />
+          <div class="row">
+            <div class="card col-12 col-sm-4 col-md-0 col-lg-2 mb-3" v-for="(beer,index) in beers" :key="index">
+              <img
+                id="img"
+                :src="beer.image"
+                :alt="`image-${image}`"
+                class="card-img-top"
+              />
+              <div class="card-body" >
+                <h6 class="card-title">{{ beer.name }}</h6>
+                <p class="card-text text-success">{{ beer.price }}<span></span></p>
+                <button
+                      @click="editBeer(beer.id)"
+                      class="btn btn-info btn-block"
+                    >
+                      Update
+                    </button>
+                    <button
+                      @click="deleteBeer(beer.id, $event)"
+                      class="btn btn-danger btn-block"
+                    >
+                      Delete
+                    </button>
+              </div>        
+            </div>
+          </div>
+        </div>
+  </template>
 
 <script>
 export default {
@@ -48,8 +116,8 @@ export default {
       const res = await fetch("https://api.sampleapis.com/beers/ale");
       const data = await res.json();
       console.log(data);
-      debugger;
-      this.beers = data.slice(0, 5);
+      //debugger;
+      this.beers = data.slice(0, 15);
       this.updateLocalStorage();
     },
     updateLocalStorage: function () {
@@ -118,8 +186,8 @@ export default {
   max-height: 150px;
 }
 
-.container{
-  background-color: blue;
+.btn{
+
 }
 #button{
 
