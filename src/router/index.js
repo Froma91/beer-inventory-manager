@@ -20,7 +20,7 @@ const routes = [
   {
     path: "/BeerFilterView",
     name: "BeerFilterView",
-    component: () => import("../views/BeerFilterView.vue"),
+    component: () => import("../views/StockBieres.vue"),
   },
 ];
 

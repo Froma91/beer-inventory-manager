@@ -2,15 +2,15 @@
   <nav class="navbar navbar-expand-lg bg-warning">
     <div class="container justify-content-around">
       <router-link to="/" class="nav-link active" aria-current="page">
-        <a class="nav-link active">Your Beer's list</a>
+        <a class="nav-link active">Liste de bières favorites</a>
       </router-link>
 
       <router-link to="/about" class="nav-link"
-        ><a class="nav-link active">About</a>
+        ><a class="nav-link active">Nous</a>
       </router-link>
 
       <router-link to="/BeerFilterView" class="nav-link"
-        ><a class="nav-link active">Beer's List</a>
+        ><a class="nav-link active">Stock de bières</a>
       </router-link>
     </div>
   </nav>

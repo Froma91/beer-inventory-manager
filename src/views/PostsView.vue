@@ -2,7 +2,7 @@
     <div id="app" class="container py-2 px-0">
       <div class="row">
         <div class="col-md-3">
-          <h2>Add Beer</h2>
+          <h2>Ajouter une bière</h2>
           <div class="card card-body">
             <form ref="userForm" v-on:submit.prevent="processBeer">
               <div class="form-group">
@@ -11,7 +11,7 @@
                   ref="name"
                   v-model="beer.name"
                   class="form-control"
-                  placeholder="Name"
+                  placeholder="Nom"
                   minlength="6"
                   maxlength="20"
                   required
@@ -22,7 +22,7 @@
                   type="text"
                   v-model="beer.price"
                   class="form-control"
-                  placeholder="Price"
+                  placeholder="Prix"
                   minlength="4"
                   maxlength="50"
                   required
@@ -48,17 +48,17 @@
                 <input
                   type="reset"
                   class="btn btn-primary btn_block"
-                  value="Clear"
+                  value="Effacer"
                 />
               </div>
             </form>
         </div>
       </div>
     </div>
-        <h1>Beer's List</h1>
+        <h1>Liste de bières favorites</h1>
         <hr />
           <div class="row">
-            <div class="card col-12 col-sm-4 col-md-0 col-lg-2 mb-3" v-for="(beer,index) in beers" :key="index">
+            <div class="card col-12 col-sm-4 col-md-0 col-lg-2 mb-3" v-for="beer in beers" :key="beer.id">
               <img
                 id="img"
                 :src="beer.image"
@@ -72,13 +72,13 @@
                       @click="editBeer(beer.id)"
                       class="btn btn-info btn-block"
                     >
-                      Update
+                      Mettre à jour
                     </button>
                     <button
                       @click="deleteBeer(beer.id, $event)"
                       class="btn btn-danger btn-block"
                     >
-                      Delete
+                      Supprimer
                     </button>
               </div>        
             </div>
@@ -97,7 +97,7 @@ export default {
         price: "",
         image: "",
       },
-      operation: "Register",
+      operation: "Enregistrer",
       beerIndex: -1,
     };
   },
@@ -117,7 +117,7 @@ export default {
       const data = await res.json();
       console.log(data);
       //debugger;
-      this.beers = data.slice(0, 15);
+      this.beers = data.slice(0,5);
       this.updateLocalStorage();
     },
     updateLocalStorage: function () {
@@ -184,12 +184,5 @@ export default {
 #img {
   max-width: 100px;
   max-height: 150px;
-}
-
-.btn{
-
-}
-#button{
-
 }
 </style>
