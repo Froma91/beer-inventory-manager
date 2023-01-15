@@ -1,90 +1,94 @@
 <template>
-    <div id="app" class="container py-2 px-0">
-      <div class="row">
-        <div class="col-md-3">
-          <h2>Ajouter une bière</h2>
-          <div class="card card-body">
-            <form ref="userForm" v-on:submit.prevent="processBeer">
-              <div class="form-group">
-                <input
-                  type="text"
-                  ref="name"
-                  v-model="beer.name"
-                  class="form-control"
-                  placeholder="Nom"
-                  minlength="6"
-                  maxlength="20"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <input
-                  type="text"
-                  v-model="beer.price"
-                  class="form-control"
-                  placeholder="Prix"
-                  minlength="4"
-                  maxlength="50"
-                  required
-                />
-                <input
-                  type="text"
-                  v-model="beer.image"
-                  class="form-control"
-                  placeholder="Image"
-                  minlength="4"
-                  maxlength="150"
-                  required
-                />
-              </div>
-              <div class="form-group py-1">
-                <input
-                  type="submit"
-                  class="btn btn-success btn_block text-dark"
-                  v-bind:value="operation"
-                />
-              </div>
-              <div class="form-group">
-                <input
-                  type="reset"
-                  class="btn btn-primary btn_block"
-                  value="Effacer"
-                />
-              </div>
-            </form>
+  <div id="app" class="container py-2 px-0">
+    <div class="row">
+      <div class="col-md-3">
+        <button @click="this.listBeers()" class="btn btn-primary" type="submit">
+          Demo
+        </button>
+        <h2>Ajouter une bière</h2>
+        <div class="card card-body">
+          <form ref="userForm" v-on:submit.prevent="processBeer">
+            <div class="form-group">
+              <input
+                type="text"
+                ref="name"
+                v-model="beer.name"
+                class="form-control"
+                placeholder="Nom"
+                minlength="6"
+                maxlength="20"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                v-model="beer.price"
+                class="form-control"
+                placeholder="Prix"
+                minlength="4"
+                maxlength="50"
+                required
+              />
+              <input
+                type="text"
+                v-model="beer.image"
+                class="form-control"
+                placeholder="Image"
+                minlength="4"
+                maxlength="150"
+                required
+              />
+            </div>
+            <div class="form-group py-1">
+              <input
+                type="submit"
+                class="btn btn-success btn_block text-dark"
+                v-bind:value="operation"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="reset"
+                class="btn btn-primary btn_block"
+                value="Effacer"
+              />
+            </div>
+          </form>
         </div>
       </div>
     </div>
-        <h1>Liste de bières favorites</h1>
-        <hr />
-          <div class="row">
-            <div class="card col-12 col-sm-4 col-md-0 col-lg-2 mb-3" v-for="beer in beers" :key="beer.id">
-              <img
-                id="img"
-                :src="beer.image"
-                :alt="`image-${image}`"
-                class="card-img-top"
-              />
-              <div class="card-body" >
-                <h6 class="card-title">{{ beer.name }}</h6>
-                <p class="card-text text-success">{{ beer.price }}<span></span></p>
-                <button
-                      @click="editBeer(beer.id)"
-                      class="btn btn-info btn-block"
-                    >
-                      Mettre à jour
-                    </button>
-                    <button
-                      @click="deleteBeer(beer.id, $event)"
-                      class="btn btn-danger btn-block"
-                    >
-                      Supprimer
-                    </button>
-              </div>        
-            </div>
-          </div>
+    <h1>Liste de bières favorites</h1>
+    <hr />
+    <div class="row">
+      <div
+        class="card col-12 col-sm-4 col-md-0 col-lg-2 mb-3"
+        v-for="beer in beers"
+        :key="beer.id"
+      >
+        <img
+          id="img"
+          :src="beer.image"
+          :alt="`image-${image}`"
+          class="card-img-top"
+        />
+        <div class="card-body">
+          <h6 class="card-title">{{ beer.name }}</h6>
+          <p class="card-text text-success">{{ beer.price }}<span></span></p>
+          <button @click="editBeer(beer.id)" class="btn btn-info btn-block">
+            Mettre à jour
+          </button>
+          <button
+            @click="deleteBeer(beer.id, $event)"
+            class="btn btn-danger btn-block"
+          >
+            Supprimer
+          </button>
         </div>
-  </template>
+      </div>
+    </div>
+  </div>
+</template>
 
 <script>
 export default {
@@ -104,8 +108,6 @@ export default {
   created() {
     if (localStorage.getItem("vue3.beers") != null) {
       this.beers = JSON.parse(localStorage.getItem("vue3.beers"));
-    } else {
-      this.listBeers();
     }
   },
   mounted() {
@@ -117,7 +119,7 @@ export default {
       const data = await res.json();
       console.log(data);
       //debugger;
-      this.beers = data.slice(0,5);
+      this.beers = data.slice(0, 5);
       this.updateLocalStorage();
     },
     updateLocalStorage: function () {

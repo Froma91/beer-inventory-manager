@@ -22,7 +22,7 @@
                 <td><img :src="beer.image" :alt="image" /></td>
                 <td>
                   <button
-                    @click="addBeer(beer.id)"
+                    @click="addBeer(beer)"
                     class="btn btn-info btn-block"
                   >
                     Ajouter à liste favorits
@@ -66,11 +66,13 @@ export default {
     updateLocalStorage() {
       localStorage.setItem("vue3.beers", JSON.stringify(this.beers));
     },
-    addBeer(){
+    addBeer(beer){
       if (this.operation == "Register") {
         console.log('biere');
       }
-      this.updateLocalStorage();
+      const oldItems = JSON.parse(localStorage.getItem('itemsArray'));
+      oldItems.push(beer);
+      localStorage.setItem("vue3.beers", JSON.stringify(oldItems));
     },
   },
   findMaxId: function () {
