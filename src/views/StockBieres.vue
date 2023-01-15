@@ -67,10 +67,7 @@ export default {
       localStorage.setItem("vue3.beers", JSON.stringify(this.beers));
     },
     addBeer(beer){
-      if (this.operation == "Register") {
-        console.log('biere');
-      }
-      const oldItems = JSON.parse(localStorage.getItem('itemsArray'));
+      const oldItems = JSON.parse(localStorage.getItem('vue3.beers')) || [];
       oldItems.push(beer);
       localStorage.setItem("vue3.beers", JSON.stringify(oldItems));
     },
