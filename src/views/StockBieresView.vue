@@ -60,8 +60,12 @@
                 </td>
                 <td></td>
                 <td class="td">
-                  <button id="btn1" @click="addBeer(beer)" class="btn btn-info btn-block">
-                    Ajouter aux favorites
+                  <button
+                    id="btn1"
+                    @click="addBeer(beer)"
+                    class="btn btn-info btn-block"
+                  >
+                    Ajouter aux favoris
                   </button>
                 </td>
               </tr>
@@ -138,5 +142,4 @@ export default {
   right: 2px;
   font-size: 18px;
 }
-
 </style>
