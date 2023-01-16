@@ -1,6 +1,6 @@
 <template>
   <div id="app" class="container-fluid py-2 px-0">
-    <div class="row">
+    <div class="row px-5">
       <div class="col-md-12">
         <h1>Stock de bières</h1>
         <div class="table-responsive">
@@ -14,8 +14,8 @@
                 <th colspan="4" options></th>
               </tr>
             </thead>
-            <tbody>
-              <tr v-for="beer in beers" :key="beer.id">
+            <tbody class="container">
+              <tr class="text-center" v-for="beer in beers" :key="beer.id">
                 <td>{{ beer.id }}</td>
                 <td>{{ beer.price }}</td>
                 <td>{{ beer.name }}</td>
@@ -26,12 +26,12 @@
                     :alt="`image-${image}`"
                   />
                 </td>
-                <td>
-                  <button @click="addBeer(beer)" class="btn btn-info btn-block">
-                    Ajouter à liste favorits
+                <td></td>
+                <td class="td">
+                  <button id="btn1" @click="addBeer(beer)" class="btn btn-info btn-block">
+                    Ajouter aux favorites
                   </button>
                 </td>
-                <td></td>
               </tr>
             </tbody>
           </table>
@@ -77,4 +77,14 @@ export default {
   max-width: 100px;
   max-height: 150px;
 }
+.td {
+  position: relative;
+}
+#btn1 {
+  position: absolute;
+  bottom: 8px;
+  right: 2px;
+  font-size: 18px;
+}
+
 </style>
