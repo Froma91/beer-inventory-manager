@@ -188,7 +188,7 @@ export default {
 </script>
 <style scoped>
 #img {
-  display: block;
+  display: block;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
@@ -198,9 +198,5 @@ export default {
 }
 #carteBiere{
   margin: 20px;
-}
-#ButtonDelete{
-  position: sticky;
-  bot: 100;
 }
 </style>
