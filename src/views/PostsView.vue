@@ -78,14 +78,18 @@
           <h6 class="card-title">{{ beer.name }}</h6>
           <p class="card-text text-success">{{ beer.price }}<span></span></p>
           <div class="div">
-            <button id="btnUpdate" @click="editBeer(beer.id)" class="btn btn-info btn-block">
+            <button
+              id="btnUpdate"
+              @click="editBeer(beer.id)"
+              class="btn btn-info btn-block"
+            >
               Mettre à jour
             </button>
           </div>
           <hr />
           <div class="div">
             <button
-            id="ButtonDelete"
+              id="ButtonDelete"
               @click="deleteBeer(beer.id, $event)"
               class="btn btn-danger btn-block"
             >
@@ -191,7 +195,7 @@ export default {
 </script>
 <style scoped>
 #img {
-display: block;
+  display: block;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
@@ -199,7 +203,7 @@ display: block;
   width: 110px;
   height: 154px;
 }
-#carteBiere{
+#carteBiere {
   margin: 20px;
 }
 </style>

@@ -25,12 +25,12 @@
             </div>
           </div>
           <button
-                @click="fetchBeers()"
-                class="btn btn-outline-light"
-                type="button"
-              >
-                Réintiliser la recherche
-              </button>
+            @click="fetchBeers()"
+            class="btn btn-outline-light"
+            type="button"
+          >
+            Réintiliser la recherche
+          </button>
         </div>
         <div class="StockBieres">
           <h2>total: {{ beers.length }}</h2>
@@ -96,9 +96,7 @@ export default {
   },
   methods: {
     async fetchBeers() {
-      const results = await axios.get(
-        `https://api.sampleapis.com/beers/ale`
-      );
+      const results = await axios.get(`https://api.sampleapis.com/beers/ale`);
       // aller chercher dans une api qqch lié à l'id
       this.beers = results.data.concat(this.beers);
     },
