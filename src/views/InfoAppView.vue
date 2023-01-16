@@ -109,7 +109,7 @@
       <h2>100% Bio</h2>
       <p>Nous faisons attention à l'environnement et à nos clients</p>
       <p>
-        <a class="btn btn-secondary" href="#">View details &raquo;</a>
+        <a class="btn btn-secondary" href="https://www.bio-suisse.ch/fr/notre-association/portrait/le-bio-en-chiffres.html">View details &raquo;</a>
       </p>
     </div>
     <div class="col-lg-4">
@@ -120,7 +120,7 @@
       <h2>Produit de qualité</h2>
       <p>Produits d'origine suisse</p>
       <p>
-        <a class="btn btn-secondary" href="#">View details &raquo;</a>
+        <a class="btn btn-secondary" href="https://www.eda.admin.ch/aboutswitzerland/en/home/dossiers/einleitung---schweizer-uhren/schweizer-qualitaet----swiss-made-.html">View details &raquo;</a>
       </p>
     </div>
     <hr class="featurette-divider" />

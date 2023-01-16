@@ -77,17 +77,21 @@
         <div class="card-body">
           <h6 class="card-title">{{ beer.name }}</h6>
           <p class="card-text text-success">{{ beer.price }}<span></span></p>
-          <button @click="editBeer(beer.id)" class="btn btn-info btn-block">
-            Mettre à jour
-          </button>
+          <div class="div">
+            <button id="btnUpdate" @click="editBeer(beer.id)" class="btn btn-info btn-block">
+              Mettre à jour
+            </button>
+          </div>
           <hr />
-          <button
-          id="ButtonDelete"
-            @click="deleteBeer(beer.id, $event)"
-            class="btn btn-danger btn-block"
-          >
-            Supprimer
-          </button>
+          <div class="div">
+            <button
+            id="ButtonDelete"
+              @click="deleteBeer(beer.id, $event)"
+              class="btn btn-danger btn-block"
+            >
+              Supprimer
+            </button>
+          </div>
         </div>
       </div>
     </div>
