@@ -64,6 +64,6 @@ Les instructions pour accéder et manipuler les données sont effectuées par no
 ![](public/schema2.png)
 <br/><br/>
 
-* Les données sont ensuite envoyées à l'interface utilisateur via des composants Vue.js qui les affichent et permettent aux utilisateurs d’y accéder. 
+Les données sont ensuite envoyées à l'interface utilisateur via des composants Vue.js qui les affichent et permettent aux utilisateurs d’y accéder. 
 
 
