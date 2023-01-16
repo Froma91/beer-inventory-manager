@@ -62,6 +62,7 @@
     <hr />
     <div class="row">
       <div
+        id="carteBiere"
         class="card col-12 col-sm-4 col-md-0 col-lg-2 mb-3"
         v-for="beer in beers"
         :key="beer.id"
@@ -79,7 +80,9 @@
           <button @click="editBeer(beer.id)" class="btn btn-info btn-block">
             Mettre à jour
           </button>
+          <hr />
           <button
+          id="ButtonDelete"
             @click="deleteBeer(beer.id, $event)"
             class="btn btn-danger btn-block"
           >
@@ -186,7 +189,19 @@ export default {
 </script>
 <style scoped>
 #img {
-  max-width: 100px;
-  max-height: 150px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  height: 50%;
+  width: 110px;
+  height: 154px;
+}
+#carteBiere{
+  margin: 20px;
+}
+#ButtonDelete{
+  position: sticky;
+  bot: 100;
 }
 </style>
