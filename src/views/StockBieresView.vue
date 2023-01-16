@@ -17,13 +17,20 @@
             <div class="input-group-append">
               <button
                 @click="filtrer(beer.name)"
-                class="btn btn-outline-secondary success"
+                class="btn btn-info"
                 type="button"
               >
                 Rechercher
               </button>
             </div>
           </div>
+          <button
+                @click="listBeers()"
+                class="btn btn-outline-light"
+                type="button"
+              >
+                Réintiliser la recherche
+              </button>
         </div>
         <div class="table-responsive">
           <table class="table table-striped">
