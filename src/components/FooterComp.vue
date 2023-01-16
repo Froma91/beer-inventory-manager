@@ -6,12 +6,10 @@
         <a href="#">Back to top</a>
       </p>
       <p class="mb-1">
-        Album example is &copy; Bootstrap, but please download and customize it
-        for yourself!
+        Cette page web a été realisé par un groupe d'étudiant qui sont passionnés de bières, gérer vos bières a votre envie
       </p>
       <p class="mb-0">
-        New to Bootstrap? <a href="/">Visit the homepage</a> or read our
-        <a href="/">getting started guide</a>.
+        Buvez avec modération si vous rencontrer des signes d'alcoolisme demander de l'aide à cette <a href="https://www.stop-alcool.ch/fr/">organisation</a>
       </p>
     </div>
   </footer>
