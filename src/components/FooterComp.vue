@@ -6,10 +6,13 @@
         <a href="#">Back to top</a>
       </p>
       <p class="mb-1">
-        Cette page web a été realisé par un groupe d'étudiant qui sont passionnés de bières, gérer vos bières a votre envie
+        Cette page web a été realisé par un groupe d'étudiant qui sont
+        passionnés de bières, gérer vos bières a votre envie
       </p>
       <p class="mb-0">
-        Buvez avec modération si vous rencontrer des signes d'alcoolisme demander de l'aide à cette <a href="https://www.stop-alcool.ch/fr/">organisation</a>
+        Buvez avec modération si vous rencontrer des signes d'alcoolisme
+        demander de l'aide à cette
+        <a href="https://www.stop-alcool.ch/fr/">organisation</a>
       </p>
     </div>
   </footer>

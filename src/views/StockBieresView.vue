@@ -25,12 +25,15 @@
             </div>
           </div>
           <button
-            @click="listBeers()"
+            @click="fetchBeers()"
             class="btn btn-outline-light"
             type="button"
           >
             Réintiliser la recherche
           </button>
+        </div>
+        <div class="StockBieres">
+          <h2>total: {{ beers.length }}</h2>
         </div>
         <div class="table-responsive">
           <table class="table table-striped">
@@ -75,6 +78,7 @@
 </template>
 
 <script>
+import axios from "axios";
 export default {
   data() {
     return {
@@ -87,15 +91,14 @@ export default {
       },
     };
   },
-  created() {
-    this.listBeers();
+  mounted() {
+    this.fetchBeers();
   },
   methods: {
-    listBeers: async function () {
-      const res = await fetch("https://api.sampleapis.com/beers/ale");
-      const data = await res.json();
-      console.log(data);
-      this.beers = data;
+    async fetchBeers() {
+      const results = await axios.get(`https://api.sampleapis.com/beers/ale`);
+      // aller chercher dans une api qqch lié à l'id
+      this.beers = results.data.concat(this.beers);
     },
     addBeer(beer) {
       const oldItems = JSON.parse(localStorage.getItem("vue3.beers")) || [];
