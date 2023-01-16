@@ -98,7 +98,7 @@ export default {
     async fetchBeers() {
       const results = await axios.get(`https://api.sampleapis.com/beers/ale`);
       // aller chercher dans une api qqch lié à l'id
-      this.beers = results.data.concat(this.beers);
+      this.beers = results.data;
     },
     addBeer(beer) {
       const oldItems = JSON.parse(localStorage.getItem("vue3.beers")) || [];
