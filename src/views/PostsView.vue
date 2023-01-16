@@ -122,7 +122,6 @@ export default {
       const res = await fetch("https://api.sampleapis.com/beers/ale");
       const data = await res.json();
       console.log(data);
-      //debugger;
       this.beers = data.slice(0, 5);
       this.updateLocalStorage();
     },
@@ -188,7 +187,7 @@ export default {
 </script>
 <style scoped>
 #img {
-  display: block;
+display: block;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
