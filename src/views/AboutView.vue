@@ -45,6 +45,7 @@
           <a
             class="btn btn-secondary"
             href="https://www.linkedin.com/in/milan-augstburger-74116623a/"
+            target="_blank"
             >View details &raquo;</a
           >
         </p>
@@ -61,6 +62,7 @@
           <a
             class="btn btn-secondary"
             href="https://www.linkedin.com/in/fredy-rodriguez-1a736a132/"
+            target="_blank"
             >View details &raquo;</a
           >
         </p>
@@ -78,6 +80,7 @@
             <a
               class="btn btn-secondary"
               href="https://www.linkedin.com/in/arthur-montandon/"
+              target="_blank"
               >View details &raquo;</a
             >
           </p>
