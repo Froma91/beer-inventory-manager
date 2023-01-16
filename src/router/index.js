@@ -8,19 +8,19 @@ const routes = [
     component: PostsView,
   },
   {
+    path: "/info",
+    name: "info",
+    component: () => import("../views/InfoAppView.vue"),
+  },
+  {
+    path: "/StockBieres",
+    name: "StockBieres",
+    component: () => import("../views/StockBieresView.vue"),
+  },
+  {
     path: "/about",
     name: "about",
     component: () => import("../views/AboutView.vue"),
-  },
-  {
-    path: "/home",
-    name: "home",
-    component: () => import("../views/HomeView.vue"),
-  },
-  {
-    path: "/BeerFilterView",
-    name: "BeerFilterView",
-    component: () => import("../views/StockBieres.vue"),
   },
 ];
 

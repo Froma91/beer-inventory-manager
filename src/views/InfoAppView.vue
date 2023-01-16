@@ -1,4 +1,9 @@
 <template>
+  <div class="content text-center">
+    <h1 classe="txt-center">
+      Bienvenues à votre application Suisse Beer Company
+    </h1>
+  </div>
   <div
     id="carouselExampleIndicators"
     class="carousel slide p-0"
@@ -76,7 +81,6 @@
       <span class="visually-hidden">Next</span>
     </button>
   </div>
-
   <!-- Trois columnes de texte au-dessous de carousel -->
   <div class="row text-center">
     <div class="col-lg-4">
@@ -120,16 +124,37 @@
       </p>
     </div>
     <hr class="featurette-divider" />
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h2>1. Ce que nous vous offrons</h2>
+          <p>Une application de gestion de cave à bière</p>
+          <p>Pratique, simple et rapide !</p>
+          <h2>2. Pourquoi nous choisir ?</h2>
+          <div>
+            <p>Pourquoi nous choisir :</p>
+            <P
+              >Il y a plusieurs raisons pour lesquelles on pourrait vouloir
+              utiliser une application de gestion de bière :
+            </P>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div class="row featurette">
       <div class="col-md-7">
         <h2 class="featurette-heading">
-          Les bières artisanals sont les meilleurs bieres du coin.
-          <span class="text-muted">Vraiment les meilleures</span>
+          Pour suivre sa consommation de bière :
+          <span class="text-muted"
+            >une application de gestion de bière peut aider à suivre combien de
+            bières ont été consommées et à quelle fréquence.
+          </span>
         </h2>
         <p class="lead">
-          Les bieres viennent d'une contrée lointaine très lointaine au dela des
-          montagnes et des rivières
+          Cela peut être utile pour ceux qui essaient de limiter leur
+          consommation de bière ou qui veulent simplement être conscients de
+          celle-ci.
         </p>
       </div>
       <div class="col-md-5">
@@ -137,7 +162,7 @@
           id="img1"
           class="rounded mx-auto d-block"
           alt="image4"
-          src="https://www.liquor.com/thmb/zzY3QbT5h9S9utBkexhECycXZIc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-519728153-7dca4b18c59f4b1fa3654e4d5c9db884.jpg"
+          src="https://binaryinformatics.com/wp-content/uploads/2018/10/mobile-application.jpg"
         />
       </div>
     </div>
@@ -146,24 +171,81 @@
     <div class="row featurette">
       <div class="col-md-7 order-md-2">
         <h2 class="featurette-heading">
-          Un moment conviviale autour d'un verre.
+          Pour enregistrer les différentes bières testées :
           <span class="text-muted"
-            >On ne choisie pas la famille, mais les amis oui !</span
+            >une application de gestion de bière peut aider à enregistrer les
+            différentes bières testées, y compris le type de bière, la brasserie
+            et les notes de dégustation.</span
           >
         </h2>
-        <p class="lead">On se voit ce weekend ;)</p>
+        <p class="lead">
+          Cela peut être utile pour ceux qui aiment essayer de nouvelles bières
+          et qui veulent garder une trace de leurs préférées.
+        </p>
       </div>
       <div class="col-md-5 order-md-1">
         <img
           class="rounded mx-auto d-block"
           alt="image5"
           id="img1"
-          src="https://www.eatthis.com/wp-content/uploads/sites/4/2022/02/Beer-flight.jpg?quality=82&strip=all"
+          src="https://static.vecteezy.com/ti/vecteur-libre/p2/2756521-notation-etoiles-jaunes-gratuit-vectoriel.jpg"
+        />
+      </div>
+    </div>
+    <hr class="featurette-divider" />
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">
+          Pour suivre les bières en stock :
+          <span class="text-muted">
+            une application de gestion de bière peut aider à suivre les bières
+            en stock et à savoir quand il est temps de s'approvisionner en
+            bière.</span
+          >
+        </h2>
+        <p class="lead">
+          Cela peut être utile pour ceux qui ont une grande collection de bières
+          et qui veulent s'assurer de ne jamais être à court de leur bière
+          préférée.
+        </p>
+      </div>
+      <div class="col-md-5">
+        <img
+          id="img1"
+          class="rounded mx-auto d-block"
+          alt="image4"
+          src="https://www.comptazine.fr/wp-content/uploads/2017/01/Stock-alerte-Stock-s%C3%A9curit%C3%A9.png"
+        />
+      </div>
+    </div>
+    <hr class="featurette-divider" />
+
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading">
+          Pour partager ses goûts en bière avec d'autres :
+          <span class="text-muted">
+            une application de gestion de bière peut permettre de partager ses
+            goûts en bière avec d'autres utilisateurs de l'application.</span
+          >
+        </h2>
+        <p class="lead">
+          Cela peut être utile pour trouver de nouvelles bières à essayer ou
+          pour recevoir des recommandations de bières de la part d'autres
+          amateurs de bière.
+        </p>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <img
+          class="rounded mx-auto d-block"
+          alt="image5"
+          id="img1"
+          src="https://t3.ldh.be/0uNbQr_mxKACCtMNwp1iBHp2eU4=/0x150:2825x1562/1280x640/5c51ef20d8ad5878f04fdbd5.jpg"
         />
       </div>
     </div>
   </div>
-
 </template>
 
 <style scoped>

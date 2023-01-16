@@ -62,26 +62,13 @@ export default {
       const res = await fetch("https://api.sampleapis.com/beers/ale");
       const data = await res.json();
       console.log(data);
-      //debugger;
       this.beers = data;
-    },
-    updateLocalStorage() {
-      localStorage.setItem("vue3.beers", JSON.stringify(this.beers));
     },
     addBeer(beer) {
       const oldItems = JSON.parse(localStorage.getItem("vue3.beers")) || [];
       oldItems.push(beer);
       localStorage.setItem("vue3.beers", JSON.stringify(oldItems));
     },
-  },
-  findMaxId: function () {
-    const maxId = Math.max.apply(
-      Math,
-      this.beers.map(function (beer) {
-        return beer.id;
-      })
-    );
-    return maxId;
   },
 };
 </script>
