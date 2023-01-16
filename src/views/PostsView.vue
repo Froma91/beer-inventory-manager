@@ -129,7 +129,7 @@ export default {
       localStorage.setItem("vue3.beers", JSON.stringify(this.beers));
     },
     processBeer: function () {
-      if (this.operation == "Register") {
+      if (this.operation == "Enregistrer") {
         this.beer.id = this.findMaxId() + 1;
         this.beers.push({
           id: this.beer.id,
