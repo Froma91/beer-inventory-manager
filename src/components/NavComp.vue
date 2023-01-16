@@ -1,20 +1,21 @@
 <template>
   <nav class="navbar navbar-expand-lg bg-warning">
     <div class="container justify-content-around">
+      <a class="navbar-brand" href="/">BSC</a>
       <router-link to="/" class="nav-link active" aria-current="page">
         <a class="nav-link active">Vos bières</a>
       </router-link>
 
       <router-link to="/StockBieres" class="nav-link"
-        ><a class="nav-link active">Stock de bières</a>
+        ><a class="nav-link">Stock de bières</a>
       </router-link>
 
       <router-link to="/info" class="nav-link"
-        ><a class="nav-link active">Info App</a>
+        ><a class="nav-link">Info App</a>
       </router-link>
 
       <router-link to="/about" class="nav-link"
-        ><a class="nav-link active">Nous</a>
+        ><a class="nav-link">Nous</a>
       </router-link>
     </div>
   </nav>
