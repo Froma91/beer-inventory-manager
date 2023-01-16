@@ -12,7 +12,7 @@
             class="numbers d-flex flex-md-row flex-wrap justify-content-center"
           >
             <div class="rect">
-              <h1>200</h1>
+              <h1>20</h1>
               <p>Fournisseurs</p>
             </div>
             <div class="rect">
@@ -20,28 +20,28 @@
               <p>Clients heureux</p>
             </div>
             <div class="rect">
-              <h1>180</h1>
+              <h1>50</h1>
               <p>Variétés de bière</p>
             </div>
             <div class="rect">
-              <h1>15'000</h1>
-              <p>Bières vendues</p>
+              <h1>5'000</h1>
+              <p>Bières ajoutées aux favoris</p>
             </div>
           </div>
         </div>
       </section>
     </div>
 
-    <div class="row text-center">
-      <div class="col-lg-4">
+    <div class="col d-flex justify-content-center">
+      <div class="col-lg-4 mb-3">
         <img
           class="img-cercle"
           src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Official_portrait_of_Barack_Obama.jpg"
         />
 
-        <h2>Milan</h2>
-        <p>Ux designer</p>
-        <p>
+        <h2 class="margin">Milan</h2>
+        <p class="margin">Ux designer</p>
+        <p class="margin">
           <a
             class="btn btn-secondary"
             href="https://www.linkedin.com/in/milan-augstburger-74116623a/"
@@ -49,15 +49,15 @@
           >
         </p>
       </div>
-      <div class="col-lg-4">
+      <div class="col-lg-4 mb-3">
         <img
           class="img-cercle"
           src="https://image.cnbcfm.com/api/v1/image/104332177-Elon_Musk_smile.jpg?v=1533729063&w=1920&h=1080"
         />
 
-        <h2>Fredy</h2>
-        <p>CEO</p>
-        <p>
+        <h2 class="margin">Fredy</h2>
+        <p class="margin">CEO</p>
+        <p class="margin">
           <a
             class="btn btn-secondary"
             href="https://www.linkedin.com/in/fredy-rodriguez-1a736a132/"
@@ -65,21 +65,23 @@
           >
         </p>
       </div>
-      <div class="col-lg-4">
-        <img
-          class="img-cercle"
-          src="https://us.123rf.com/450wm/gstockstudio/gstockstudio1501/gstockstudio150100083/35274508-brasseur-heureux-bonne-jeune-brasseur-hommes-en-tablier-tenant-un-verre-de-bi%C3%A8re-et-regarder-avec-un.jpg"
-        />
+      <div class="col-lg-4 mb-3">
+        <div class="card-body">
+          <img
+            class="img-cercle"
+            src="https://us.123rf.com/450wm/gstockstudio/gstockstudio1501/gstockstudio150100083/35274508-brasseur-heureux-bonne-jeune-brasseur-hommes-en-tablier-tenant-un-verre-de-bi%C3%A8re-et-regarder-avec-un.jpg"
+          />
 
-        <h2>Arthur</h2>
-        <p>Brasseur</p>
-        <p>
-          <a
-            class="btn btn-secondary"
-            href="https://www.linkedin.com/in/arthur-montandon/"
-            >View details &raquo;</a
-          >
-        </p>
+          <h2 class="margin">Arthur</h2>
+          <p class="margin">Brasseur</p>
+          <p class="margin">
+            <a
+              class="btn btn-secondary"
+              href="https://www.linkedin.com/in/arthur-montandon/"
+              >View details &raquo;</a
+            >
+          </p>
+        </div>
       </div>
     </div>
   </div>
@@ -135,10 +137,17 @@ export default {
   width: 140px;
   height: 140px;
   border-radius: 180px;
+  margin-left: 135px;
 }
 .col-lg-4 {
   background-color: #1c1c1c;
   padding-top: 2em;
   border-radius: 0.5em;
+  width: 400px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.margin {
+  text-align: center;
 }
 </style>
