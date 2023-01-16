@@ -180,8 +180,7 @@ export default {
       this.operation = "Register";
       this.$ref.name.focus();
     },
-    
-    },
+  },
 };
 </script>
 <style scoped>

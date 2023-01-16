@@ -1,57 +1,12 @@
 <template>
-  <div class="container-fluid">
+  <div class="container-fluid" :style="image">
     <div id="app" class="container py-2 px-0">
       <section class="section-2 container-fluid p-0">
-        <div
-            id="carouselExampleIndicators"
-            class="carousel slide p-0"
-            data-bs-ride="carousel"
-        >
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img
-          id="img"
-          src="https://media.revistagq.com/photos/5f0d9c5b42f91a64e56906c7/16:9/w_1920,c_limit/george-cox-l9Z93oauxgs-unsplash.jpg"
-          class="mx-auto d-block w-100 h-100"
-          alt="img1"
-        />
-      </div>
-      <div class="carousel-item">
-        <img
-          id="img"
-          src="https://www.letribunaldunet.fr/wp-content/uploads/2020/10/bieres.jpg"
-          class="mx-auto d-block w-100 h-100"
-          alt="img2"
-        />
-      </div>
-      <div class="carousel-item">
-        <img
-          id="img"
-          src="https://storage.lebonguide.com/crop-1600x700/81/10/F3CDF8D1-365F-4AB4-9C33-1F2E8A08C4A0.png"
-          class="mx-auto d-block w-100 h-100"
-          alt="img3"
-        />
-      </div>
-    </div>
-    <button
-      class="carousel-control-prev"
-      type="button"
-      data-bs-target="#carouselExampleIndicators"
-      data-bs-slide="prev"
-    >
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button
-      class="carousel-control-next"
-      type="button"
-      data-bs-target="#carouselExampleIndicators"
-      data-bs-slide="next"
-    >
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
+        <div class="cover">
+          <div class="content text-center">
+            <h1>Les points qui nous rendent uniques</h1>
+          </div>
+        </div>
         <div class="container-fluid text-center">
           <div
             class="numbers d-flex flex-md-row flex-wrap justify-content-center"
@@ -66,7 +21,7 @@
             </div>
             <div class="rect">
               <h1>180</h1>
-              <p>Variété de bières</p>
+              <p>Variétés de bière</p>
             </div>
             <div class="rect">
               <h1>15'000</h1>
@@ -83,11 +38,15 @@
           class="img-cercle"
           src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Official_portrait_of_Barack_Obama.jpg"
         />
-        
+
         <h2>Milan</h2>
         <p>Ux designer</p>
         <p>
-          <a class="btn btn-secondary" href="">View details &raquo;</a>
+          <a
+            class="btn btn-secondary"
+            href="https://www.linkedin.com/in/milan-augstburger-74116623a/"
+            >View details &raquo;</a
+          >
         </p>
       </div>
       <div class="col-lg-4">
@@ -99,7 +58,11 @@
         <h2>Fredy</h2>
         <p>CEO</p>
         <p>
-          <a class="btn btn-secondary" href="">View details &raquo;</a>
+          <a
+            class="btn btn-secondary"
+            href="https://www.linkedin.com/in/fredy-rodriguez-1a736a132/"
+            >View details &raquo;</a
+          >
         </p>
       </div>
       <div class="col-lg-4">
@@ -111,13 +74,16 @@
         <h2>Arthur</h2>
         <p>Brasseur</p>
         <p>
-          <a class="btn btn-secondary" href="">View details &raquo;</a>
+          <a
+            class="btn btn-secondary"
+            href="https://www.linkedin.com/in/arthur-montandon/"
+            >View details &raquo;</a
+          >
         </p>
       </div>
     </div>
   </div>
 </template>
-
 <script>
 export default {
   data() {
@@ -175,5 +141,4 @@ export default {
   padding-top: 2em;
   border-radius: 0.5em;
 }
-
 </style>
