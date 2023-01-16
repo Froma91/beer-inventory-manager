@@ -19,17 +19,19 @@
                 <td>{{ beer.id }}</td>
                 <td>{{ beer.price }}</td>
                 <td>{{ beer.name }}</td>
-                <td><img :src="beer.image" :alt="image" /></td>
                 <td>
-                  <button
-                    @click="addBeer(beer)"
-                    class="btn btn-info btn-block"
-                  >
+                  <img
+                    :src="beer.image"
+                    onerror="this.onerror=null; this.src='https://www.totalwine.com/media/sys_master/cmsmedia/hff/h0e/8979036078110.png'"
+                    :alt="`image-${image}`"
+                  />
+                </td>
+                <td>
+                  <button @click="addBeer(beer)" class="btn btn-info btn-block">
                     Ajouter à liste favorits
                   </button>
                 </td>
-                <td>
-                </td>
+                <td></td>
               </tr>
             </tbody>
           </table>
@@ -53,7 +55,7 @@ export default {
     };
   },
   created() {
-      this.listBeers ();  
+    this.listBeers();
   },
   methods: {
     listBeers: async function () {
@@ -66,21 +68,21 @@ export default {
     updateLocalStorage() {
       localStorage.setItem("vue3.beers", JSON.stringify(this.beers));
     },
-    addBeer(beer){
-      const oldItems = JSON.parse(localStorage.getItem('vue3.beers')) || [];
+    addBeer(beer) {
+      const oldItems = JSON.parse(localStorage.getItem("vue3.beers")) || [];
       oldItems.push(beer);
       localStorage.setItem("vue3.beers", JSON.stringify(oldItems));
     },
   },
   findMaxId: function () {
-      const maxId = Math.max.apply(
-        Math,
-        this.beers.map(function (beer) {
-          return beer.id;
-        })
-      );
-      return maxId;
-    },
+    const maxId = Math.max.apply(
+      Math,
+      this.beers.map(function (beer) {
+        return beer.id;
+      })
+    );
+    return maxId;
+  },
 };
 </script>
 <style scoped>

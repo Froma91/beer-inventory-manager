@@ -16,7 +16,7 @@
                 class="form-control"
                 placeholder="Nom"
                 minlength="6"
-                maxlength="20"
+                maxlength="50"
                 required
               />
             </div>
@@ -69,6 +69,7 @@
         <img
           id="img"
           :src="beer.image"
+          onerror="this.onerror=null; this.src='https://www.totalwine.com/media/sys_master/cmsmedia/hff/h0e/8979036078110.png'"
           :alt="`image-${image}`"
           class="card-img-top"
         />
@@ -179,7 +180,8 @@ export default {
       this.operation = "Register";
       this.$ref.name.focus();
     },
-  },
+    
+    },
 };
 </script>
 <style scoped>
