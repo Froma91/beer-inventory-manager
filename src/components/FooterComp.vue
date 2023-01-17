@@ -7,11 +7,11 @@
       </p>
       <p class="mb-1">
         Cette page web a été realisé par un groupe d'étudiant qui sont
-        passionnés de bières, gérer vos bières a votre envie
+        passionnés de bières, gérez vos bières à votre envie
       </p>
       <p class="mb-0">
         Buvez avec modération si vous rencontrer des signes d'alcoolisme
-        demander de l'aide à cette
+        demandez de l'aide à cette
         <a href="https://www.stop-alcool.ch/fr/" target="_blank"
           >organisation</a
         >
