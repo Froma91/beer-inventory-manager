@@ -1,10 +1,10 @@
 import { createRouter, createWebHistory } from "vue-router";
-import PostsView from "../views/PostsView.vue";
+import PostsView from "../views/ListeFavoritsVue.vue";
 
 const routes = [
   {
     path: "/",
-    name: "posts",
+    name: "ListeFavorits",
     component: PostsView,
   },
   {

@@ -204,7 +204,7 @@ export default {
   margin-right: auto;
   width: 50%;
   height: 50%;
-  width: 110px;
+  width: 150px;
   height: 154px;
 }
 #carteBiere {
