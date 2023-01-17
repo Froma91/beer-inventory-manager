@@ -1,9 +1,7 @@
 <template>
   <div id="app" class="container py-2 px-0">
-    <div class="content text-center"> 
-      <h1 classe=" text text-center">
-       Suisse Beer Company
-    </h1>
+    <div class="content text-center">
+      <h1 classe=" text text-center">Suisse Beer Company</h1>
     </div>
 
     <div class="row">
