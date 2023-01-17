@@ -12,6 +12,8 @@
               placeholder="Une biere ?"
               minlength="6"
               maxlength="50"
+              @keyup="filtrer(beer.name)"
+              
               required
             />
             <div class="input-group-append">
