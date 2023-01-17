@@ -178,7 +178,7 @@ export default {
       this.beer.image = beerFound.image;
     },
     deleteBeer(id, event) {
-      const confirmation = confirm("Do you want to delete the beer?");
+      const confirmation = confirm("Voulez-vous vraiment effacer cette bière?");
       if (confirmation) {
         this.beers = this.beers.filter((beer) => beer.id != id);
         this.updateLocalStorage();

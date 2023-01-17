@@ -1,32 +1,32 @@
-import { createRouter, createWebHistory } from "vue-router";
+import { createRouter, createWebHashHistory } from "vue-router";
 import PostsView from "../views/ListeFavoritsVue.vue";
 
-const routes = [
-  {
-    path: "/",
-    name: "ListeFavorits",
-    component: PostsView,
-  },
-  {
-    path: "/info",
-    name: "info",
-    component: () => import("../views/InfoAppView.vue"),
-  },
-  {
-    path: "/StockBieres",
-    name: "StockBieres",
-    component: () => import("../views/StockBieresView.vue"),
-  },
-  {
-    path: "/about",
-    name: "about",
-    component: () => import("../views/AboutView.vue"),
-  },
-];
-
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
-  routes,
+  history: createWebHashHistory(import.meta.env.BASE_URL),
+  routes: [
+    {
+      path: "/",
+      name: "ListeFavorits",
+      component: PostsView,
+    },
+    {
+      path: "/info",
+      name: "info",
+      component: () => import("../views/InfoAppView.vue"),
+    },
+    {
+      path: "/StockBieres",
+      name: "StockBieres",
+      component: () => import("../views/StockBieresView.vue"),
+    },
+    {
+      path: "/about",
+      name: "about",
+      component: () => import("../views/AboutView.vue"),
+    },
+
+
+  ],
 });
 
 export default router;
