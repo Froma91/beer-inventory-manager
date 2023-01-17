@@ -13,7 +13,6 @@
               minlength="6"
               maxlength="50"
               @keyup="filtrer(beer.name)"
-              
               required
             />
           </div>
