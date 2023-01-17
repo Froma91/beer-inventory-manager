@@ -9,22 +9,13 @@
               type="text"
               ref="name"
               v-model="beer.name"
-              placeholder="Une biere ?"
+              placeholder="Recherche"
               minlength="6"
               maxlength="50"
               @keyup="filtrer(beer.name)"
               
               required
             />
-            <div class="input-group-append">
-              <button
-                @click="filtrer(beer.name)"
-                class="btn btn-info"
-                type="button"
-              >
-                Rechercher
-              </button>
-            </div>
           </div>
           <button
             @click="fetchBeers()"
