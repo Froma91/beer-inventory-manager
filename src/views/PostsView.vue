@@ -1,6 +1,5 @@
 <template>
   <div id="app" class="container py-2 px-0">
-    <h1 class="text-center">Beer Suisse Company</h1>
     <div class="row">
       <div class="col-md-3">
         <button @click="this.listBeers()" class="btn btn-primary" type="submit">
