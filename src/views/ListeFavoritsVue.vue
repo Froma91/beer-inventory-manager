@@ -178,7 +178,7 @@ export default {
       this.beer.image = beerFound.image;
     },
     deleteBeer(id, event) {
-      const confirmation = confirm("Do you want to delete the beer?");
+      const confirmation = confirm("Voulez-vous vraiment effacer cette bière?");
       if (confirmation) {
         this.beers = this.beers.filter((beer) => beer.id != id);
         this.updateLocalStorage();
@@ -204,7 +204,7 @@ export default {
   margin-right: auto;
   width: 50%;
   height: 50%;
-  width: 110px;
+  width: 150px;
   height: 154px;
 }
 #carteBiere {
