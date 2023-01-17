@@ -11,7 +11,7 @@
       </p>
       <p class="mb-0">
         Buvez avec modération si vous rencontrer des signes d'alcoolisme
-        demander de l'aide à cette
+        demandez de l'aide à cette
         <a href="https://www.stop-alcool.ch/fr/">organisation</a>
       </p>
     </div>

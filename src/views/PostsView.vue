@@ -1,5 +1,11 @@
 <template>
   <div id="app" class="container py-2 px-0">
+    <div class="content text-center"> 
+      <h1 classe=" text text-center">
+       Suisse Beer Company
+    </h1>
+    </div>
+
     <div class="row">
       <div class="col-md-3">
         <button @click="this.listBeers()" class="btn btn-primary" type="submit">
@@ -59,6 +65,7 @@
       </div>
     </div>
     <h1>Liste de bières favorites</h1>
+    <h2>Total: {{ beers.length }}</h2>
     <hr />
     <div class="row">
       <div

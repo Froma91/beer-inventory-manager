@@ -13,7 +13,7 @@
           >
             <div class="rect">
               <h1>20</h1>
-              <p>Fournisseurs</p>
+              <p>Marques</p>
             </div>
             <div class="rect">
               <h1>500</h1>

@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar navbar-expand-lg bg-warning">
     <div class="container justify-content-around">
-      <a class="navbar-brand" href="/">BSC</a>
+      <a class="navbar-brand">BSC</a>
       <router-link to="/" class="nav-link active" aria-current="page">
         <a class="nav-link active">Vos bières</a>
       </router-link>

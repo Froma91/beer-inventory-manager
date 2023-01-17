@@ -33,7 +33,7 @@
           </button>
         </div>
         <div class="StockBieres">
-          <h2>total: {{ beers.length }}</h2>
+          <h2>Total: {{ beers.length }}</h2>
         </div>
         <div class="table-responsive">
           <table class="table table-striped">
