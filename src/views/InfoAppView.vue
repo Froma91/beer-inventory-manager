@@ -97,6 +97,7 @@
         <a
           class="btn btn-secondary"
           href="https://www.pourquoidocteur.fr/Mieux-Vivre/33820-Passer-temps-amis-serait-cle-du-bonheur"
+          target="_blank"
           >View details &raquo;</a
         >
       </p>
@@ -112,6 +113,7 @@
         <a
           class="btn btn-secondary"
           href="https://www.bio-suisse.ch/fr/notre-association/portrait/le-bio-en-chiffres.html"
+          target="_blank"
           >View details &raquo;</a
         >
       </p>
@@ -127,6 +129,7 @@
         <a
           class="btn btn-secondary"
           href="https://www.eda.admin.ch/aboutswitzerland/en/home/dossiers/einleitung---schweizer-uhren/schweizer-qualitaet----swiss-made-.html"
+          target="_blank"
           >View details &raquo;</a
         >
       </p>
