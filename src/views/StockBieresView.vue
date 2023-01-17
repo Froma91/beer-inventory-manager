@@ -97,7 +97,6 @@ export default {
   methods: {
     async fetchBeers() {
       const results = await axios.get(`https://api.sampleapis.com/beers/ale`);
-      // aller chercher dans une api qqch lié à l'id
       this.beers = results.data;
     },
     addBeer(beer) {
@@ -106,7 +105,6 @@ export default {
       localStorage.setItem("vue3.beers", JSON.stringify(oldItems));
     },
     filtrer: async function (beerName) {
-      console.log(beerName);
       const liste = [];
       const res = await fetch("https://api.sampleapis.com/beers/ale");
       const data = await res.json();

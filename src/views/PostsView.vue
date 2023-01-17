@@ -134,7 +134,6 @@ export default {
     listBeers: async function () {
       const res = await fetch("https://api.sampleapis.com/beers/ale");
       const data = await res.json();
-      console.log(data);
       this.beers = data.slice(0, 5);
       this.updateLocalStorage();
     },
