@@ -50,7 +50,6 @@
                     :alt="`image-${image}`"
                   />
                 </td>
-                <td></td>
                 <td class="td">
                   <button
                     id="btn1"

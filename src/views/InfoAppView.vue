@@ -1,6 +1,6 @@
 <template>
   <div class="content text-center">
-    <h1 classe="txt-center">
+    <h1 classe="text-center">
       Bienvenues à votre application Suisse Beer Company
     </h1>
   </div>
