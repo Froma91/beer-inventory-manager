@@ -66,4 +66,21 @@ Les instructions pour accéder et manipuler les données sont effectuées par no
 
 Les données sont ensuite envoyées à l'interface utilisateur via des composants Vue.js qui les affichent et permettent aux utilisateurs d’y accéder. 
 
+## Technologies
 
+- Vue.js
+- Node.js
+- JavaScript
+- HTML5
+- CSS3
+- Bootstrap
+- REST API
+- Git
+- GitHub
+
+## Features
+
+- Manage a personal beer inventory
+- Add and remove favorite beers
+- Retrieve beer information from a public API
+- Responsive user interface
